@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 
 const router = express.Router();
 const app = express();
-const lendas = [
+var lendas = [
     {
         nome: "Mula sem Cabeça"
     },
@@ -27,7 +27,7 @@ app.get("/lendas-urbanas/:index", (req, res) => {
     res.send(lendas[req.params.index]);
 })
 
-app.post("/lendas-urbanas/", (req, res) => {
+app.post("/lendas-urbanas", (req, res) => {
     lendas.push(req.body);
     res.send({message: "Criado com Sucesso"});
 })
