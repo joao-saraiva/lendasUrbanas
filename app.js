@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    console.log("oioio")
+    res.send("<html><head><meta name='viewport' content='width=device-'> <body> <h1>BEM VINDO</h1></body></html>")
 })
 
 app.listen(3000, function() {
