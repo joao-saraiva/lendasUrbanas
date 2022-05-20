@@ -1,16 +1,21 @@
-import express from "express";
-import bodyParser from "body-parser";
+
+
+const express = require("express");
+const funcoes = require("./functions")
 
 const router = express.Router();
 const app = express();
 var lendas = [
     {
         nome: "Mula sem Cabeça",
-        criador: "Luís da Câmara."
+        criador: "Luís da Câmara.",
+        paraMaiorIdade: true
+        
     },
     {
         nome: "Curupira",
-        criador: "José de Anchieta"
+        criador: "José de Anchieta",
+        paraMaiorIdade: false 
     }
 ]
 
@@ -18,8 +23,8 @@ app.use(express.json());
 
 app.get("/lendas-urbanas", (req,res) => {
 
-    let lendasFiltradas = lendas.map( (lenda) => { return [ `Ǹome: ${lenda.nome}`, `Ǹome: ${lenda.criador}`] } );
-    res.send(lendasFiltradas.join(","));
+    let lendasFiltradas = funcoes.listaTodasAsLendas(lendas);
+    res.send(lendasFiltradas);
 })
 
 app.get('/', (req, res) => {
