@@ -3,7 +3,6 @@
 const express = require("express");
 const funcoes = require("./functions")
 
-const router = express.Router();
 const app = express();
 var lendas = [
     {
