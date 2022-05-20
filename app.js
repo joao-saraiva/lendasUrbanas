@@ -32,12 +32,13 @@ app.get('/', (req, res) => {
 })
 
 app.get("/lendas-urbanas/:index", (req, res) => {
-    res.send([ `Nome: ${lendas[req.params.index].nome }` , `Criador: ${lendas[req.params.index].criador }`].join(", "));
+    let lenda = funcoes.formataLenda(lendas[req.params.index]);
+    
+    res.send(lenda);
 })
 
 app.post("/lendas-urbanas", (req, res) => {
     lendas.push(req.body);
-    console.log(lendas.slice(-1)[0].nome);
     res.send("<html><head><meta name='viewport' content='width=device-'> <body> <h1>Criado com Sucesso</h1></body></html>");
 })
 
