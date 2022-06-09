@@ -52,6 +52,6 @@ app.delete("/lendas-urbanas/:index", (req, res) => {
     res.send("<html><head><meta name='viewport' content='width=device-'> <body> <h1>Deletado com Sucesso</h1></body></html>");
 })
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
     console.log("we are online");
 })
