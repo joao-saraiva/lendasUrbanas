@@ -1,9 +1,11 @@
+// retorna o nome da lenda e tambem o nome da pessoa que escreveu/deu origem a historia
 function formataLenda(lenda) {
     if (lenda) {
         return `nome: ${lenda.nome}, criador: ${lenda.criador}`
     }
 }
 
+// função para listar todas as lendas urbanas que existem na site.
 function listaTodasAsLendas(lendas) {
     if (lendas) {
         return lendas.map ((lenda) => formataLenda(lenda)).join(", ")
