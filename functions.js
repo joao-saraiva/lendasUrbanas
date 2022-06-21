@@ -22,6 +22,7 @@ function listaMaiorDeIdade(lendas) {
     }
 }
 
+// função para listar lendas considedas adequadas para pessoas menores de 18 anos, pois não possuem coisas explicitas ou muito assustadoras
 function listaMenorDeIdade(lendas) {
     if (lendas) {
         var lendasParaMenoresDeIdade = lendas.filter((lenda) => !lenda.paraMaiorIdade)
