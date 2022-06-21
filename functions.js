@@ -12,6 +12,8 @@ function listaTodasAsLendas(lendas) {
     }
 }
 
+
+// funnção para listar as lendas consideradas adequedas para quem tem mais de 18 anos. consideras sangrentas ou assustadoras demais
 function listaMaiorDeIdade(lendas) {
     if (lendas) {
         var lendasParaMaioresDeIdade = lendas.filter((lenda) => lenda.paraMaiorIdade)
